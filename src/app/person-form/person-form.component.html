@@ -1,3 +1,67 @@
-<p>
-  person-form works!
-</p>
+<h3>Gerenciar Pessoa</h3>
+<hr>
+
+<form class="form form-horizontal" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+  <div class="container">
+    <div class="form-group ">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Nome">
+    </div>
+  </div>
+  <div class="container">
+    <div formGroupName="endereco">
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-3">
+            <label for="cep" class="control-label">Cep</label>
+            <input type="text" class="form-control" [ngClass]="aplicaCssErro('endereco.numero')" id="cep"
+              formControlName="cep" placeholder="cep">
+          </div>
+          <div class="col-md-3">
+            <label for="numero" class="control-label">Número</label>
+            <input type="text" class="form-control" [ngClass]="aplicaCssErro('endereco.numero')" id="numero"
+              formControlName="numero" placeholder="Número">
+          </div>
+          <div class="col-md-6">
+            <label for="complemento" class="control-label">Complemento</label>
+            <input type="text" class="form-control" id="complemento" formControlName="complemento" placeholder="Complemento">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-4">
+            <label for="rua" class="control-label">Rua</label>
+            <input type="text" class="form-control" id="rua" formControlName="rua" placeholder="Rua">
+          </div>
+
+          <div class="col-md-3">
+            <label for="bairro" class="control-label">Bairro</label>
+            <input type="text" class="form-control" id="bairro" formControlName="bairro" placeholder="bairro">
+          </div>
+
+          <div class="col-md-3">
+            <label for="cidade" class="control-label">Cidade</label>
+            <input type="text" class="form-control" id="cidade" formControlName="cidade" placeholder="cidade">
+          </div>
+
+          <div class="col-md-2">
+            <label for="estado" class="control-label">Estado</label>
+            <input type="text" class="form-control" id="estado" formControlName="estado" placeholder="estado">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <hr>
+        <button type="submit" class="btn btn-info">Salvar</button>&nbsp;
+        <button type="submit" class="btn btn-warning">Resetar</button>
+      </div>
+
+    </div>
+  </div>
+</form>
