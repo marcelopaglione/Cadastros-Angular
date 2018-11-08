@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="margin-debug" *ngIf="form">
+    <h5>Detalhes - Debug Mode ON</h5>
+
+    <code>Formulário válido</code>
+    <pre>{{ form.valid }}</pre>
+
+    <br>
+    <code>Formulário submetido</code>
+    <pre>{{ form.submitted }}</pre>
+
+    <br>
+    <code>Formulário Valores</code>
+    <pre>{{ form.value | json }}</pre>
+
+  </div>
+</div>

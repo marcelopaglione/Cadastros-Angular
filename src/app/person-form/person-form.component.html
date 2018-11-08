@@ -6,7 +6,7 @@
   <div class="container">
     <div class="form-group ">
       <label for="nome">Nome</label>
-      <input type="text" class="form-control" id="nome" placeholder="Nome">
+      <input type="text" class="form-control" id="nome" placeholder="Nome" formControlName="nome">
     </div>
   </div>
   <div class="container">
@@ -65,3 +65,4 @@
     </div>
   </div>
 </form>
+<app-debug [form]="formulario"></app-debug>
